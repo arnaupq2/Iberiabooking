@@ -1,6 +1,6 @@
 import { Client, GatewayIntentBits } from 'discord.js';
 
-const token = "ODUxNDc2NDg4NzQxMDYwNjky.G3pJeA.IQQ38cpkrPUvMWjRzzRcFpEUsmtS5PyiT6j5cI";
+const token = "";
 
 console.log("Testing HARDCODED token...");
 console.log(`Token: ${token.substring(0, 5)}...`);
