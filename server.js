@@ -26,7 +26,7 @@ app.use(cors()); // Allow Vite frontend
 app.use(express.json());
 
 const PORT = 3001;
-const ALLOWED_USERS = ['arnaupq', 'sternials', 'iconicute'];
+const ALLOWED_USERS = ['arnaupq', 'antonella_2024', 'iconicute'];
 
 // Discord Client Setup
 const client = new Client({
