@@ -11,6 +11,15 @@ dotenv.config({ override: true });
 console.log('Current working directory:', process.cwd());
 const token = process.env.DISCORD_TOKEN;
 console.log('Token form .env:', token ? `${token.substring(0, 5)}...${token.substring(token.length - 5)}` : 'undefined');
+if (token) {
+    console.log(`Token Length: ${token.length}`);
+    console.log(`First 5 chars codes: ${token.substring(0, 5).split('').map(c => c.charCodeAt(0))}`);
+    console.log(`Last 5 chars codes: ${token.substring(token.length - 5).split('').map(c => c.charCodeAt(0))}`);
+    // Check for common issues
+    if (token.includes(' ')) console.warn('WARNING: Token contains spaces!');
+    if (token.includes('"')) console.warn('WARNING: Token contains quotes!');
+    if (token.includes('\r')) console.warn('WARNING: Token contains carriage returns!');
+}
 
 const app = express();
 app.use(cors()); // Allow Vite frontend

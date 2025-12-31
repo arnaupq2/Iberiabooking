@@ -44,7 +44,7 @@ const Admin = () => {
         setAuthError('');
         setLoading(true);
         try {
-            const res = await fetch('http://localhost:3001/api/send-code', {
+            const res = await fetch('/api/send-code', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username })
@@ -67,7 +67,7 @@ const Admin = () => {
         setAuthError('');
         setLoading(true);
         try {
-            const res = await fetch('http://localhost:3001/api/verify-code', {
+            const res = await fetch('/api/verify-code', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, code: otp })
